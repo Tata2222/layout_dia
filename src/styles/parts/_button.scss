@@ -1,0 +1,24 @@
+.button {
+  @include hover(background-color, $c-btn-active);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  width: 226px;
+  color: $c-white;
+  font-family: $header-font;
+  text-decoration: none;
+  background-color: $c-pink;
+  border: 0;
+  border-radius: $btn-border-radius;
+  cursor: pointer;
+  outline: none;
+
+  @media screen and (max-width: $mobileWidth) {
+    width: 100%;
+  }
+
+  &:focus {
+    background-color: $c-btn-active;
+  }
+}

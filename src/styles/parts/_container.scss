@@ -1,0 +1,25 @@
+.main-container {
+  display: flex;
+  width: 100%;
+}
+
+.main-wrapper {
+  margin: 0 auto;
+  padding: 0 227px;
+  max-width: 1146px;
+
+  @media (max-width: $desktopWidth) {
+    padding: 0 70px;
+    max-width: 1060px;
+  }
+
+  @media (max-width: $tabletWidth) {
+    max-width: 760px;
+    padding: 0 70px;
+  }
+
+  @media (max-width: $mobileWidth) {
+    max-width: 290px;
+    padding: 0 15px;
+  }
+}

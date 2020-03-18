@@ -1,0 +1,67 @@
+.expertise {
+  background-color: $c-white;
+
+  &__container {
+    padding: 128px 0 134px;
+  }
+
+  &__list {
+    padding-top: 64px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $tabletWidth) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    max-width: 264px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 1400px) {
+      width: 200px;
+    }
+    @media (max-width: $tabletWidth) {
+      padding-top: 40px;
+      width: 264px;
+    }
+  }
+
+  &__image-wrapper {
+    width: 184px;
+    height: 166px;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    @include titleStyleDark;
+    font-size: 52px;
+    text-align: center;
+
+    @media (max-width: $desktopWidth) {
+      font-size: 26px;
+      line-height: 30px;
+    }
+  }
+
+  &__list-title {
+    @include titleStyleDark;
+    font-size: 20px;
+    padding-top: 40px;
+  }
+
+  &__list-text {
+    text-align: center;
+    @include paragraphStyle;
+    font-size: 14px;
+    padding-top: 16px;
+  }
+}

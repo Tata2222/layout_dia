@@ -1,0 +1,169 @@
+.header {
+  position: relative;
+  height: 800px;
+  background: $bg-c-blue;
+  border-radius: 0 0 0 120px;
+  @media screen and (max-width: $desktopWidth) {
+    height: 600px;
+  }
+  @media screen and (max-width: $tabletWidth) {
+    height: auto;
+  }
+
+  &__info-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 687px;
+    grid-template-rows: 120px 680px;
+    column-gap: 60px;
+    align-items: stretch;
+    grid-template-areas: "menu menu" "info-block slider";
+    @media screen and (max-width: $desktopWidth) {
+      grid-template-columns: 1fr 487px;
+      grid-template-rows: 120px 480px;
+    }
+    @media screen and (max-width: $tabletWidth) {
+      column-gap: 0;
+    }
+
+    @media screen and (max-width: $minTabletWidth) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 120px 350px 350px;
+      align-items: center;
+      grid-template-areas: "menu" "info-block" "slider";
+
+    }
+  }
+
+  &__menu-wrapper {
+    max-width: 1146px;
+    grid-area: menu;
+    display: grid;
+    grid-template-columns: minmax(max-content, 64px)  max-content 1fr;
+    align-items: center;
+    column-gap: 64px;
+    padding: 0 150px;
+    @media screen and (max-width: $desktopWidth) {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0 70px;
+    }
+  }
+
+  &__nav-btn {
+
+    display: none;
+    height: 20px;
+    width: 20px;
+    background-image: url("../../images/header/sandwich.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    z-index: 120;
+    @include hover(transform, scale(1.2));
+
+    &:focus {
+      transform: scale(1.2);
+    }
+    @media screen and (max-width: $desktopWidth) {
+      display: block;
+      order: 1;
+
+      &:focus {
+        transform: scale(1.1);
+      }
+    }
+
+    &--close {
+      background-image: url("../../images/header/close.svg");
+    }
+  }
+
+  &__logo {
+    @media screen and (max-width: $desktopWidth) {
+      order: 2;
+      justify-self: center;
+    }
+  }
+
+  &__hire {
+    @include navItemStyle;
+    color: $c-white;
+    justify-self: end;
+    white-space: nowrap;
+    @media screen and (max-width: $desktopWidth) {
+      order: 3;
+    }
+  }
+
+  &__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-area: info-block;
+    padding: 120px 0 0 150px;
+    max-width: 362px;
+    @media screen and (max-width: $desktopWidth) {
+      padding: 60px 0 0 70px;
+    }
+    @media screen and (max-width: $tabletWidth) {
+      padding: 30px 0 0 70px;
+    }
+    @media screen and (max-width: $minTabletWidth) {
+      justify-self: center;
+      padding: 15px 30px;
+    }
+  }
+
+  &__title {
+    @include titleStyle;
+    font-size: 64px;
+    line-height: 68px;
+    letter-spacing: -2px;
+    margin-bottom: 32px;
+    @media screen and (max-width: $tabletWidth) {
+      font-size: 44px;
+    }
+  }
+
+  &__text {
+    @include paragraphStyle;
+    font-size: 18px;
+    color: $c-white;
+    margin-bottom: 83px;
+    @media screen and (max-width: $desktopWidth) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    grid-area: slider;
+    align-self: end;
+    @media screen and (max-width: $tabletWidth) {
+      padding-top: 60px;
+      align-self: start;
+      justify-self: center;
+    }
+  }
+
+  &__nav {
+    transition: all 0.6s ease-in-out;
+    @media screen and (max-width: $desktopWidth) {
+
+      position: absolute;
+      &--show {
+        display: block;
+      }
+    }
+  }
+}

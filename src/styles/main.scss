@@ -1,7 +1,11 @@
 @import "utils";
 @import "fonts";
 @import "typography";
-
-body {
-  background: $c-gray;
-}
+@import "reset";
+@import "parts/header";
+@import "parts/nav";
+@import "parts/slider";
+@import "parts/button";
+@import "parts/container";
+@import "parts/about";
+@import "parts/expertise";

@@ -1,0 +1,40 @@
+
+.nav {
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 64px;
+    justify-content: end;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease;
+    @media screen and (max-width: $desktopWidth) {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      background: $bg-c-blue;
+      left: -70px;
+      top: -50px;
+      opacity: 0;
+      transform: translateY(-100%);
+
+      &--mobile {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 3;
+      }
+    }
+  }
+
+  &__link {
+    color: $c-white;
+    @include navItemStyle;
+    @include linkActive($c-pink);
+    @media screen and (max-width: $desktopWidth) {
+      /*font-size: 30px;*/
+    }
+  }
+
+}

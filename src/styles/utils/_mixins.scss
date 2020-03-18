@@ -1,6 +1,60 @@
 @mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
+  transition: #{$_property} 0.6s ease-in-out;
   &:hover {
     #{$_property}: $_toValue;
+  }
+}
+
+@mixin navItemStyle {
+  font-family: $header-font;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 150%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $c-white;
+}
+
+@mixin titleStyle {
+  font-family: $header-font;
+  font-weight: 600;
+  color: $c-white;
+}
+
+@mixin titleStyleDark {
+  font-family: $header-font;
+  font-weight: 600;
+  color: $c-title;
+}
+
+@mixin paragraphStyle {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  line-height: 150%;
+  color: $c-paragragh;
+}
+
+@mixin linkActive($_color) {
+  position: relative;
+  outline: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    border-radius: 4px;
+    left: 50%;
+    background: $_color;
+    transition: all 0.3s ease-in-out;
+    bottom: -8px;
+  }
+
+  &:hover {
+    &:after {
+      content: "";
+      width: 100%;
+      left: 0;
+    }
   }
 }
