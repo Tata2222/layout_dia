@@ -1,0 +1,11 @@
+<svg width="98" height="129" viewBox="0 0 98 129"  xmlns="http://www.w3.org/2000/svg">
+<rect x="-9.78906" y="110.832" width="139" height="56" rx="28" transform="rotate(-60 -9.78906 110.832)" fill="#56CCF2"/>
+<rect x="-9.78906" y="110.832" width="139" height="56" rx="28" transform="rotate(-60 -9.78906 110.832)" fill="url(#paint0_linear)" fill-opacity="0.25"/>
+<path id="ellipse"/>
+<defs>
+<linearGradient id="paint0_linear" x1="59.7109" y1="110.832" x2="59.7109" y2="166.832" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
