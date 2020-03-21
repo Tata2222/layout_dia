@@ -1,0 +1,126 @@
+.contact {
+  background-color: $bg-c-blue;
+  border-radius: 0 200px 0 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 460px);
+    justify-content: space-between;
+
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 180px 150px;
+    box-sizing: border-box;
+
+    @media (max-width: 1400px) {
+      grid-template-columns: repeat(2, 400px);
+    }
+
+    @media (max-width: $desktopWidth) {
+      grid-template-columns: 1fr 1fr;
+      padding: 80px 70px;
+      column-gap: 50px;
+    }
+
+    @media (max-width: $tabletWidth) {
+      grid-template-columns: 1fr;
+      row-gap: 50px;
+    }
+
+    @media (max-width: $mobileWidth) {
+      grid-template-columns: 1fr;
+      padding: 70px 15px;
+    }
+  }
+
+  &-img__wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 160px;
+  }
+
+  &-img__link {
+    display: flex;
+    width: 32px;
+    height: 32px;
+  }
+
+  &__title {
+    padding-top: 16px;
+    @include titleStyle;
+    font-size: 32px;
+    line-height: 150%;
+  }
+
+  &__label {
+    @include  navItemStyle;
+    font-size: 13px;
+    opacity: 0.5;
+    padding-top: 56px;
+  }
+
+  &__text {
+    @include paragraphStyle;
+    color: $c-white;
+    font-size: 24px;
+    padding-top: 8px;
+  }
+
+  &__btn {
+    @media (max-width: $tabletWidth) {
+      margin: 0 auto;
+    }
+  }
+
+  &__form {
+    padding-top: 56px;
+    padding-bottom: 80px;
+    @media (max-width: $desktopWidth) {
+      padding-bottom: 40px;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    @include titleStyle;
+    font-size: 15px;
+    line-height: 22px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    outline: none;
+    margin-bottom: 48px;
+    padding: 10px 5px;
+
+    @media (max-width: $desktopWidth) {
+      margin-bottom: 30px;
+    }
+
+    &:focus {
+      border-bottom: 2px solid #fff;
+    }
+
+    &::placeholder {
+      @include titleStyle;
+      font-size: 15px;
+      line-height: 22px;
+      opacity: 0.5;
+    }
+  }
+}
+
+#facebook:hover,
+#twitter:hover,
+#instagram:hover {
+  transform: scale(1.1);
+  fill: #d2ebff;
+}

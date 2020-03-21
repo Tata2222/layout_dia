@@ -13,9 +13,14 @@
   border-radius: $btn-border-radius;
   cursor: pointer;
   outline: none;
+  transition: all 0.6s ease;
 
   @media screen and (max-width: $mobileWidth) {
     width: 100%;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 20px 0 rgba(30, 58, 87, 0.7);
   }
 
   &:focus {

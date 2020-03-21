@@ -1,12 +1,21 @@
-.main-container {
-  display: flex;
+.main__container {
+  background-color: orange;
   width: 100%;
 }
 
-.main-wrapper {
+.main__wrapper--dark {
+  background-color: $c-gray;
+}
+
+.main__wrapper--light {
+  background-color: $c-white;
+}
+
+.main__wrapper {
   margin: 0 auto;
-  padding: 0 227px;
-  max-width: 1146px;
+  padding: 0 150px; //227px;
+  max-width: 1600px;
+  box-sizing: border-box;
 
   @media (max-width: $desktopWidth) {
     padding: 0 70px;
@@ -21,5 +30,27 @@
   @media (max-width: $mobileWidth) {
     max-width: 290px;
     padding: 0 15px;
+  }
+}
+
+.main__wrapper--left {
+  margin: 0 auto;
+  padding-left: 60px; //227px;
+  max-width: 1600px;
+  box-sizing: border-box;
+
+  @media (max-width: $desktopWidth) {
+    padding-left: 70px;
+    max-width: 1060px;
+  }
+
+  @media (max-width: $tabletWidth) {
+    max-width: 760px;
+    padding-left: 0;
+  }
+
+  @media (max-width: $mobileWidth) {
+    width: 100%;
+    padding-left: 10px;
   }
 }

@@ -1,0 +1,161 @@
+.proccess {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: $desktopWidth) {
+      flex-direction: column;
+
+    }
+  }
+
+  &-info__wrapper {
+    padding: 250px 0;
+    max-width: 362px;
+    @media (max-width: $desktopWidth) {
+      padding: 80px 0 0;
+      max-width: 380px;
+    }
+  }
+
+  &__label {
+    @include  navItemStyle;
+    color: $c-label;
+    font-size: 13px;
+  }
+
+  &__title {
+    padding-top: 16px;
+    @include titleStyleDark;
+    font-size: 32px;
+    line-height: 130%;
+  }
+
+  &__text {
+    padding-top: 24px;
+    @include paragraphStyle;
+    font-size: 14px;
+    @media (max-width: $desktopWidth) {
+      padding-top: 16px;
+    }
+  }
+
+  &-boxes__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 264px);
+    grid-template-rows: repeat(2, 264px);
+    grid-gap: 30px;
+    padding-top: 280px;
+    margin-bottom: -132px;
+
+    @media (max-width: $desktopWidth) {
+      padding-top: 30px;
+      margin-left: auto;
+    }
+
+    @media (max-width: $minTabletWidth) {
+      grid-template-columns: 1fr;
+      margin-right: auto;
+    }
+  }
+
+  &-box {
+    width: 264px;
+    height: 264px;
+    border-radius: 24px;
+    box-shadow: 0 6px 20px 0 rgba(30, 58, 87, 0.07);
+    background-color: $c-white;
+    padding: 32px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    transition: all 0.6s ease;
+
+    &--higher {
+      margin-top: -132px;
+      @media (max-width: $desktopWidth) {
+        margin-top: 0;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 6px 20px 0 rgba(30, 58, 87, 0.7);
+    }
+  }
+
+  &-box__number {
+    display: block;
+    width: 46px;
+    height: 24px;
+    border-radius: 23px;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  &-box__text {
+    width: 200px;
+    @include paragraphStyle;
+    font-weight: 600;
+    font-size: 13px;
+    padding-top: 24px;
+  }
+
+  &-box__add {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+  }
+
+  &-box__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url("../../images/proccess/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: none;
+    border: none;
+  }
+
+  &-box__link {
+    padding-left: 16px;
+    @include titleStyleDark;
+    font-size: 15px;
+    color: #334563;
+  }
+}
+
+.box-blue {
+  background-color: rgba(86, 204, 242, 0.1);
+  color: #56ccf2 ;
+}
+
+.box-yellow {
+  background-color: rgba(252, 201, 29, 0.1);
+  color: #fcc91d;
+}
+
+.box-green {
+  background-color: rgba(21, 216, 80, 0.1);
+  color: #15d850;
+}
+
+.box-red {
+  background-color: rgba(243, 99, 99, 0.1);
+  color: #f36363;
+}
+
+.btn-blue {
+  background-color: rgb(86, 204, 242);
+}
+
+.btn-yellow {
+  background-color: rgb(252, 201, 29);
+}
+
+.btn-green {
+  background-color: rgb(21, 216, 80);
+}
+
+.btn-red {
+  background-color: rgb(243, 99, 99);
+}
