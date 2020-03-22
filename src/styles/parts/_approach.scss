@@ -29,9 +29,15 @@
   }
 
   &-info__wrapper {
+    display: flex;
+    flex-direction: column;
     align-self: center;
     justify-self: center;
     max-width: 362px;
+    
+    @media (max-width: $tabletWidth) {
+      align-items: center;
+    }
   }
 
   &__label {

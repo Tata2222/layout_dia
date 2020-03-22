@@ -20,10 +20,12 @@
     align-items: stretch;
     grid-template-areas: "menu menu" "info-block slider";
     margin: 0 auto;
+
     @media screen and (max-width: $desktopWidth) {
       grid-template-columns: 1fr 487px;
       grid-template-rows: 120px 480px;
     }
+
     @media screen and (max-width: $tabletWidth) {
       column-gap: 0;
     }
@@ -31,6 +33,13 @@
     @media screen and (max-width: $minTabletWidth) {
       grid-template-columns: 1fr;
       grid-template-rows: 120px 350px 350px;
+      align-items: center;
+      grid-template-areas: "menu" "info-block" "slider";
+    }
+
+    @media screen and (max-width: $mobileWidth) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 120px 450px;
       align-items: center;
       grid-template-areas: "menu" "info-block" "slider";
 
@@ -155,6 +164,9 @@
       padding-top: 60px;
       align-self: start;
       justify-self: center;
+    }
+    @media screen and (max-width: $mobileWidth) {
+      display: none;
     }
   }
 
