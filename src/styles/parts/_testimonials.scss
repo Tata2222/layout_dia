@@ -80,7 +80,6 @@
       position: absolute;
       width: 139px;
       height: 56px;
-      background-color: $c-card-1;
       border-radius: 30px;
       top: 50%;
       left: -50%;
@@ -97,6 +96,13 @@
       height: 56px;
       border-radius: 30px;
       transform: rotate(-60deg) translate(-50%, 50%);
+    }
+
+    &--first {
+      &::before,
+      &::after {
+        background-color: $c-card-1;
+      }
     }
 
     &--middle {
