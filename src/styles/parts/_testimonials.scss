@@ -98,6 +98,20 @@
       border-radius: 30px;
       transform: rotate(-60deg) translate(-50%, 50%);
     }
+
+    &--middle {
+      &::before,
+      &::after {
+        background-color: $c-card-2;
+      }
+    }
+
+    &--last {
+      &::before,
+      &::after {
+        background-color: $c-card-3;
+      }
+    }
   }
 
   &__image {
@@ -140,42 +154,6 @@
       .testimonials__image-wrapper::after {
         opacity: 0.5;
       }
-    }
-  }
-
-  &--middle {
-    &::before,
-    &::after {
-      background-color: $c-card-2;
-    }
-  }
-
-  &--last {
-    &::before,
-    &::after {
-      background-color: $c-card-3;
-    }
-  }
-
-  &__img {
-    object-fit: cover;
-    width: 140px;
-    height: 140px;
-    z-index: 1;
-    border-radius: 50%;
-    margin: 87px auto 82px;
-    transition: transform 0.5s;
-
-    &:hover {
-      transform: scale(1.2);
-    }
-
-    &:hover ~ .person__rigth-img {
-      transform: rotate(0.5turn);
-    }
-
-    &:hover ~ .person__left-img {
-      transform: rotate(0.5turn);
     }
   }
 }
