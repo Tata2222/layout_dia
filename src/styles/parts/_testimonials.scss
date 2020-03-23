@@ -85,6 +85,12 @@
 
     &:hover {
       box-shadow: 0 6px 20px 0 rgba(30, 58, 87, 0.7);
+
+      #quotes1,
+      #quotes2,
+      #quotes3 {
+        fill-opacity: 0.5;
+      }
     }
   }
 
@@ -141,10 +147,4 @@
     height: 140px;
     z-index: 100;
   }
-}
-
-#quotes1:hover,
-#quotes2:hover,
-#quotes3:hover {
-  fill-opacity: 0.5;
 }

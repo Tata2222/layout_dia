@@ -2,15 +2,21 @@
   width: 100%;
 }
 
-.main__wrapper--dark {
+.wrapper--dark {
   background-color: $c-gray;
 }
 
-.main__wrapper--light {
+.wrapper--light {
   background-color: $c-white;
+  width: 100%;
 }
 
-.main__wrapper {
+.wrapper--contact {
+  background-color: $bg-c-blue;
+  border-radius: 0 200px 0 0;
+}
+
+.inner__wrapper {
   margin: 0 auto;
   padding: 0 150px;
   max-width: 1600px;
