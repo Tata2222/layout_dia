@@ -1170,7 +1170,6 @@ body::before {
     position: absolute;
     width: 139px;
     height: 56px;
-    background-color: #56ccf2;
     border-radius: 30px;
     top: 50%;
     left: -50%;
@@ -1187,6 +1186,8 @@ body::before {
     border-radius: 30px;
     -webkit-transform: rotate(-60deg) translate(-50%, 50%);
             transform: rotate(-60deg) translate(-50%, 50%); }
+  .testimonials__image-wrapper--first::before, .testimonials__image-wrapper--first::after {
+    background-color: #56ccf2; }
   .testimonials__image-wrapper--middle::before, .testimonials__image-wrapper--middle::after {
     background-color: #fcc304; }
   .testimonials__image-wrapper--last::before, .testimonials__image-wrapper--last::after {
