@@ -17,6 +17,7 @@
 }
 
 .inner__wrapper {
+  position: relative;
   margin: 0 auto;
   padding: 0 150px;
   max-width: 1600px;
@@ -38,7 +39,7 @@
   }
 }
 
-.main__wrapper--left {
+.wrapper--left {
   margin: 0 auto;
   padding-left: 60px; //227px;
   max-width: 1600px;

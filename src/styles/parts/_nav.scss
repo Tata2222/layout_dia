@@ -16,14 +16,16 @@
       width: 100vw;
       background: $bg-c-blue;
       left: -70px;
-      top: -50px;
       opacity: 0;
       transform: translateY(-100%);
+      @media screen and (max-width: $mobileWidth) {
+        left: -15px;
+      }
 
       &--mobile {
         transform: translateY(0);
         opacity: 1;
-        z-index: 3;
+        z-index: 100;
       }
     }
   }
@@ -32,9 +34,5 @@
     color: $c-white;
     @include navItemStyle;
     @include linkActive($c-pink);
-    @media screen and (max-width: $desktopWidth) {
-      /*font-size: 30px;*/
-    }
   }
-
 }
