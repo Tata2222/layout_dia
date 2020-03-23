@@ -1187,6 +1187,10 @@ body::before {
     border-radius: 30px;
     -webkit-transform: rotate(-60deg) translate(-50%, 50%);
             transform: rotate(-60deg) translate(-50%, 50%); }
+  .testimonials__image-wrapper--middle::before, .testimonials__image-wrapper--middle::after {
+    background-color: #fcc304; }
+  .testimonials__image-wrapper--last::before, .testimonials__image-wrapper--last::after {
+    background-color: #f25656; }
 
 .testimonials__image {
   position: relative;
@@ -1232,34 +1236,6 @@ body::before {
     .testimonials__item:hover .testimonials__image-wrapper::before,
     .testimonials__item:hover .testimonials__image-wrapper::after {
       opacity: 0.5; }
-
-.testimonials--middle::before, .testimonials--middle::after {
-  background-color: #fcc304; }
-
-.testimonials--last::before, .testimonials--last::after {
-  background-color: #f25656; }
-
-.testimonials__img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 140px;
-  height: 140px;
-  z-index: 1;
-  border-radius: 50%;
-  margin: 87px auto 82px;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s; }
-  .testimonials__img:hover {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2); }
-  .testimonials__img:hover ~ .person__rigth-img {
-    -webkit-transform: rotate(0.5turn);
-            transform: rotate(0.5turn); }
-  .testimonials__img:hover ~ .person__left-img {
-    -webkit-transform: rotate(0.5turn);
-            transform: rotate(0.5turn); }
 
 .apply {
   background-image: url("./../images/pills.svg");
