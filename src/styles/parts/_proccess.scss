@@ -72,6 +72,18 @@
     }
   }
 
+  &-box__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url("../../images/proccess/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: none;
+    border: none;
+    transition: all 0.3s ease-in-out;
+  }
+
   &-box {
     width: 264px;
     height: 264px;
@@ -80,7 +92,7 @@
     background-color: $c-white;
     padding: 32px;
     box-sizing: border-box;
-    transition: all 0.6s ease;
+    transition: all 0.3s ease;
     z-index: 100;
 
     &--third,
@@ -115,6 +127,10 @@
     &:hover {
       box-shadow: 0 6px 20px 0 rgba(30, 58, 87, 0.7);
     }
+    &:hover .proccess-box__btn {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
   }
 
   &-box__number {
@@ -138,17 +154,6 @@
     display: flex;
     align-items: center;
     padding-top: 32px;
-  }
-
-  &-box__btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-image: url("../../images/proccess/arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    outline: none;
-    border: none;
   }
 
   &-box__link {

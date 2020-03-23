@@ -75,6 +75,10 @@
   }
 
   &__btn {
+    margin-top: 80px;
+    @media (max-width: $desktopWidth) {
+      margin-top: 40px;
+    }
     @media (max-width: $tabletWidth) {
       margin: 0 auto;
     }
@@ -90,10 +94,6 @@
 
   &__form {
     padding-top: 56px;
-    padding-bottom: 80px;
-    @media (max-width: $desktopWidth) {
-      padding-bottom: 40px;
-    }
   }
 }
 
@@ -132,9 +132,24 @@
   }
 }
 
-#facebook:hover,
-#twitter:hover,
-#instagram:hover {
-  transform: scale(1.1);
+.icon-btn {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+#facebook,
+#twitter,
+#instagram {
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-btn:hover #facebook,
+#twitter,
+#instagram {
   fill: #d2ebff;
 }

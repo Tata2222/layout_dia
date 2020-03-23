@@ -40,19 +40,17 @@
 }
 
 .wrapper--left {
-  margin: 0 auto;
-  padding-left: 60px; //227px;
-  max-width: 1600px;
+  margin-left: auto;
+  max-width: 94vw;
   box-sizing: border-box;
 
   @media (max-width: $desktopWidth) {
-    padding-left: 70px;
-    max-width: 1060px;
+    margin: 0 auto;
   }
 
   @media (max-width: $tabletWidth) {
     max-width: 760px;
-    padding-left: 0;
+    margin: 0 auto;
   }
 
   @media (max-width: $mobileWidth) {

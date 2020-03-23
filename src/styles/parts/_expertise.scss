@@ -45,6 +45,7 @@
   &__image {
     width: 100%;
     height: auto;
+    @include hover(transform, scale(1.2));
   }
 
   &__title {

@@ -3,14 +3,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 976px;
-    /*display: flex;*/
     background-color: $c-pink;
     justify-content: space-between;
     border-radius: 200px 0 0 200px;
     overflow: hidden;
-    @media (min-width: 1601px) {
-      border-radius: 200px;
-    }
+   
     @media (max-width: $desktopWidth) {
       display: grid;
       grid-template-columns: 1fr;
@@ -34,7 +31,7 @@
     align-self: center;
     justify-self: center;
     max-width: 362px;
-    
+
     @media (max-width: $tabletWidth) {
       align-items: center;
     }

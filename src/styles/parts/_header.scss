@@ -30,16 +30,16 @@
       column-gap: 0;
     }
 
-    @media screen and (max-width: $minTabletWidth) {
+    @media screen and (max-width: $tabletWidth) {
       grid-template-columns: 1fr;
-      grid-template-rows: 120px 350px 350px;
+      grid-template-rows: 120px 380px 340px;
       align-items: center;
       grid-template-areas: "menu" "info-block" "slider";
     }
 
     @media screen and (max-width: $mobileWidth) {
       grid-template-columns: 1fr;
-      grid-template-rows: 120px 450px;
+      grid-template-rows: 120px 400px;
       align-items: center;
       grid-template-areas: "menu" "info-block" "slider";
 
@@ -107,6 +107,26 @@
     color: $c-white;
     justify-self: end;
     white-space: nowrap;
+
+    &-link {
+      position: relative;
+      color: $c-white;
+      padding: 10px 0;
+      @include navItemStyle;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        border-radius: 4px;
+        background-color: $c-pink;
+      }
+    }
+
     @media screen and (max-width: $desktopWidth) {
       order: 3;
     }
@@ -122,11 +142,12 @@
       padding: 60px 0 0 70px;
     }
     @media screen and (max-width: $tabletWidth) {
-      padding: 30px 0 0 70px;
+      justify-self: center;
+      padding: 40px 0 60px;
     }
     @media screen and (max-width: $minTabletWidth) {
-      padding: 30px 0 0;
-      justify-self: center;
+      padding: 30px 0 60px;
+
     }
     @media screen and (max-width: $mobileWidth) {
       align-self: flex-start;
@@ -153,25 +174,28 @@
     @media screen and (max-width: $desktopWidth) {
       margin-bottom: 50px;
     }
+    @media screen and (max-width: $tabletWidth) {
+      text-align: center;
+    }
   }
 
   &__btn {
     display: block;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tabletWidth) {
+      margin: 0 auto;
+    }
+    @media screen and (max-width: $minTabletWidth) {
       width: 100%;
     }
   }
 
   &__slider {
-    position: relative;
+    position: absolute;
     grid-area: slider;
-    align-self: end;
+    right: 0;
+    bottom: 0;
     overflow: hidden;
-    @media screen and (max-width: $tabletWidth) {
-      padding-top: 60px;
-      align-self: start;
-      justify-self: center;
-    }
+
     @media screen and (max-width: $mobileWidth) {
       display: none;
     }

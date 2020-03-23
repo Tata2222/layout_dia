@@ -16,9 +16,11 @@
 
     @media screen and (max-width: $tabletWidth) {
       position: relative;
-      border-radius: 0 120px;
-      width: 350px;
+      left: 0;
+      border-radius: 0 0 0 120px;
+      width: 100vw;
       height: 340px;
+      margin: 0 auto;
     }
   }
 

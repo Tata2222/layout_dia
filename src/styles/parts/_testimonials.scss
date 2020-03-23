@@ -34,15 +34,14 @@
     min-width: 1024px;
 
     @media (max-width: $desktopWidth) {
-      margin-left: -70px;
+      margin: 0 -70px;
     }
-    @media (max-width: 1030px) {
-      flex-direction: column;
-      align-items: center;
+    @media (max-width: 1032px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
       min-width: 100%;
       padding-top: 30px;
-      margin-left: 0;
-
+      margin: 0;
     }
 
     &-text {
@@ -66,31 +65,6 @@
       @include navItemStyle;
       color: $c-label;
       padding-top: 4px;
-    }
-  }
-
-  &__item {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 314px;
-    height: 494px;
-    border-radius: 24px;
-    background-color: #fff;
-    box-shadow: 0 6px 20px 0 rgba(30, 58, 87, 0.07);
-    transition: all 0.6s ease;
-    @media (max-width: 1030px) {
-      margin-bottom: 30px;
-    }
-
-    &:hover {
-      box-shadow: 0 6px 20px 0 rgba(30, 58, 87, 0.7);
-
-      #quotes1,
-      #quotes2,
-      #quotes3 {
-        fill-opacity: 0.5;
-      }
     }
   }
 
@@ -124,20 +98,6 @@
       border-radius: 30px;
       transform: rotate(-60deg) translate(-50%, 50%);
     }
-
-    &--middle {
-      &::before,
-      &::after {
-        background-color: $c-card-2;
-      }
-    }
-
-    &--last {
-      &::before,
-      &::after {
-        background-color: $c-card-3;
-      }
-    }
   }
 
   &__image {
@@ -146,5 +106,76 @@
     width: 140px;
     height: 140px;
     z-index: 100;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 314px;
+    height: 494px;
+    border-radius: 24px;
+    background-color: #fff;
+    box-shadow: 0 6px 20px 0 rgba(30, 58, 87, 0.07);
+    transition: all 0.6s ease;
+    @media (max-width: 1030px) {
+      margin-bottom: 30px;
+    }
+
+    &:hover {
+      box-shadow: 0 6px 20px 0 rgba(30, 58, 87, 0.7);
+
+      #quotes1,
+      #quotes2,
+      #quotes3 {
+        fill-opacity: 0.5;
+      }
+
+      .testimonials__image {
+        transform: scale(1.2);
+      }
+
+      .testimonials__image-wrapper::before,
+      .testimonials__image-wrapper::after {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &--middle {
+    &::before,
+    &::after {
+      background-color: $c-card-2;
+    }
+  }
+
+  &--last {
+    &::before,
+    &::after {
+      background-color: $c-card-3;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 140px;
+    height: 140px;
+    z-index: 1;
+    border-radius: 50%;
+    margin: 87px auto 82px;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:hover ~ .person__rigth-img {
+      transform: rotate(0.5turn);
+    }
+
+    &:hover ~ .person__left-img {
+      transform: rotate(0.5turn);
+    }
   }
 }
