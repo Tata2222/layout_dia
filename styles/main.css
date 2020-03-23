@@ -332,6 +332,28 @@ body::before {
     width: 100%;
     left: 0; }
 
+.back_to_top {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  border-radius: 50%;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: #008aff;
+  background-image: url("./../images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  display: none;
+  opacity: 0.7; }
+
+.back_to_top-show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .slider__img-container {
   position: relative;
   width: 687px;
