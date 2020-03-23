@@ -48,7 +48,7 @@
           </ul>
         </nav>
         <div class="header__hire">
-          <a href="#" class="nav__link">
+          <a href="#" class="header__hire-link">
             Hire us
           </a>
         </div>
@@ -90,21 +90,20 @@
       </div>
     </header>
     <main class="main__container">
-
-    <section  id="about" class="about">
-      <div class="inner__wrapper">
-        <div class="about__container">
-        <h2 class="about__title">
-          Who we are
-        </h2>
-        <p class="about__text">
-          We embrace a strategic approach to creative ideas. We are interested in people and human relationships.
-          This is the main thing you need to know about us. We believe in the power of bold ideas that can solve
-          business challenges.
-        </p>
+      <section  id="about" class="about">
+        <div class="inner__wrapper">
+          <div class="about__container">
+          <h2 class="about__title">
+            Who we are
+          </h2>
+          <p class="about__text">
+            We embrace a strategic approach to creative ideas. We are interested in people and human relationships.
+            This is the main thing you need to know about us. We believe in the power of bold ideas that can solve
+            business challenges.
+          </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       <section id="services" class="expertise wrapper--light">
         <div class="inner__wrapper ">
@@ -241,7 +240,7 @@
       </section>
 
       <section  id="approach" class="approach">
-        <div class="wrapper--left"></div>
+        <div class="wrapper--left">
           <div class="approach__container">
             <div class="approach-info__wrapper">
               <span class="approach__label">Approach</span>
@@ -386,26 +385,24 @@
               <h2 class="contact__title">
                 Send us  a message
               </h2>
-              <form action="#" method="get" class="contact__form form">
-                <input type="email" class="form__input" placeholder="Your email" required>
-                <input type="text" class="form__input" placeholder="Your name" required>
-                <input type="text" class="form__input form__input--outer" placeholder="Your message" required>
+              <form action="mailto:exemple@gmail.com" method="POST" id="contact-form" class="contact__form form">
+                <input type="email" name="email" id="email" class="form__input" required="" placeholder="Your email" maxlength="40">
+                <input type="text" name="name" id="name" class="form__input" required="" placeholder="Your name" maxlength="40">
+                <textarea name="message" id="message" rows="1" class="form__input form__input--outer" required="" placeholder="Your message" maxlength="300"></textarea>
+                <button type="submit" id="contact-form-btn" class="button contact__btn">Send</button>
               </form>
-              <a href="#" class="button contact__btn">
-                Send
-              </a>
             </div>
             <div class="contact-info__wrapper">
               <h2 class="contact__title">
                 Contact us
               </h2>
               <p class="contact__label">Call us</p>
-              <p class="contact__text"> 654 321 987</p>
+              <a href="tel:654 321 987" class="contact__text"> 654 321 987</a>
               <p class="contact__label">Visit us</p>
               <p class="contact__text">2905 West Drive, Buffalo Grove</p>
               <p class="contact__label">Our socials</p>
               <div class="contact-img__wrapper">
-                <a href="" class="contact-img__link">
+                <button class="icon-btn"><a href="" class="contact-img__link">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path id="facebook" d="M22.6667 4.66674C22.6667 4.48993 22.5964 4.32036 22.4714
@@ -427,7 +424,8 @@
                   8.80007 22.3464 8.72983 22.4714 8.60481C22.5964 8.47978 22.6667 8.31021
                     22.6667 8.1334V4.66674Z" fill="white"/>
                   </svg>
-                </a>
+                </a></button>
+                <button class="icon-btn">
                 <a href="" class="contact-img__link">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -451,7 +449,8 @@
                   24.9686 4.20894 25.061 4.31908 25.1204C6.32377 26.1222 8.53139 26.6513 10.7724
                   26.6671Z" fill="white"/>
                   </svg>
-                </a>
+                </a></button>
+                <button class="icon-btn">
                 <a href="" class="contact-img__link">
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -479,7 +478,7 @@
                   8.92558C25.9828 10.5054 25.8383 14.2542 25.8383 16C25.8383 17.7458 25.9828
                   21.4999 25.3564 23.0744Z" fill="white"/>
                   </svg>
-                </a>
+                </a></button>
               </div>
             </div>
           </div>
