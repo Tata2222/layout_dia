@@ -9,6 +9,9 @@
   @media screen and (max-width: $tabletWidth) {
     height: auto;
   }
+  @media screen and (max-width: $mobileWidth) {
+    border-radius: 0;
+  }
 
   &__info-container {
     max-width: 1600px;
@@ -39,10 +42,9 @@
 
     @media screen and (max-width: $mobileWidth) {
       grid-template-columns: 1fr;
-      grid-template-rows: 120px 400px;
+      grid-template-rows: 120px 420px;
       align-items: center;
       grid-template-areas: "menu" "info-block" "slider";
-
     }
   }
 
