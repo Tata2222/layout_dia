@@ -57,6 +57,9 @@ body::before {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   z-index: 100; }
 
+textarea {
+  resize: none; }
+
 .header {
   position: relative;
   height: 800px;
