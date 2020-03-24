@@ -14,15 +14,17 @@
       grid-template-rows: 1fr;
       justify-content: center;
       border-radius: 120px;
-      margin-right: 70px;
     }
+
     @media (max-width: $tabletWidth) {
       margin: auto;
       border-radius: 60px;
     }
+
     @media (max-width: $minTabletWidth) {
       height: 800px;
     }
+    
     @media (max-width: $mobileWidth) {
       border-radius: 0;
       padding: 0 15px;

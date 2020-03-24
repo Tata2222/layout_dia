@@ -37,8 +37,9 @@
   }
 
   @media (max-width: $mobileWidth) {
-    max-width: 290px;
     padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
